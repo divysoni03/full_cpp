@@ -1,0 +1,22 @@
+1. Create a C++ program that reads a text file and counts the number of words in it.
+
+2. Write a program that reads a CSV file and calculates the average of a specific column of numerical data.
+
+Name,Age,Height,Weight
+John,28,5.9,170
+Jane,34,5.7,150
+Alice,23,5.5,120
+Bob,40,6.0,180
+Charlie,29,5.8,165
+
+3. Develop a C++ application that copies the contents of one text file into another.
+
+4. Implement a program that reads a file containing a list of names and sorts them alphabetically.
+
+5. Create a file management system in C++ that allows users to create, read, update, and delete text files.
+
+6. Develop a program that extracts all email addresses from a given text file.
+
+7. Write a C++ program that merges two sorted text files into a single sorted file.
+
+8. Develop a file comparison tool that compares two text files and identifies the differences between them.
