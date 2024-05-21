@@ -1,0 +1,55 @@
+>	Write a C++ program to convert temperature in Fahrenheit to Celsius.
+	Sample Output:
+	Convert temperature in Fahrenheit to Celsius :
+	---------------------------------------------------
+	Input the temperature in Fahrenheit : 95
+	The temperature in Fahrenheit : 95
+	The temperature in Celsius : 35
+
+>	Write a program in C++ that converts kilometers per hour to miles per hour.
+	Sample Output:
+	Convert kilometers per hour to miles per hour :
+	----------------------------------------------------
+	Input the distance in kilometer : 25
+	The 25 Km./hr. means 15.5343 Miles/hr.
+
+>	Write a program in C++ to convert temperature in Kelvin to Fahrenheit.
+	Sample Output:
+	Convert temperature in Kelvin to Fahrenheit :
+	---------------------------------------------------
+	Input the temperature in Kelvin : 300
+	The temperature in Kelvin : 300
+	The temperature in Fahrenheit : 80.33
+
+>	Write a C++ program that takes a number as input and prints its multiplication table up to 10.
+	Sample Output:
+	Print the multiplication table of a number upto 10:
+	--------------------------------------------------------
+	Input a number: 5
+	5 x 1 = 5
+	5 x 2 = 10
+	5 x 3 = 15
+	5 x 4 = 20
+	5 x 5 = 25
+	5 x 6 = 30
+	5 x 7 = 35
+	5 x 8 = 40
+	5 x 9 = 45
+	5 x 10 = 50
+
+>	Write a C++ program that accepts the radius of a circle from the user and computes the area and circumference.
+	Sample Output:
+	Find the area and circumference of any circle :
+	----------------------------------------------------
+	Input the radius(1/2 of diameter) of a circle : 5
+	The area of the circle is : 78.5397
+	The circumference of the circle is : 31.4159
+
+
+>	Write a C++ program to enter length in centimeters and convert it into meters and kilometers.
+	Sample Output:
+	Convert centimeter into meter and kilometer :
+	--------------------------------------------------
+	Input the distance in centimeter : 250000
+	The distance in meter is: 2500
+	The distance in kilometer is: 2.5

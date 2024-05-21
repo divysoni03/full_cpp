@@ -1,0 +1,12 @@
+Q. What is Abstraction?
+> Abstraction is a process of hiding the implementation details and showing only functionality to the user.
+> In CPP, Abstraction is achieved using Abstract classes and interfaces.
+> Using Interfaces we can achieve 100% Abstraction.
+> Using Abstract classes we can achieve 0-100% Abstraction.
+> Abstract classes can have both abstract and non-abstract methods.
+
+There are many ways to apply Abstraction in CPP or in real life. For example, we can take a real-life example of a Rickshaw. We don't know how the Rickshaw is made, but we know how to drive it. This is called Abstraction.
+
+
+1. Abstract Class
+2. Interface

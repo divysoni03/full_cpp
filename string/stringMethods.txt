@@ -1,0 +1,85 @@
+1. compare(const string& str): Compares the string to another string (`str`) and returns an integer indicating their relationship.
+   
+2. length(): Returns the length of the string.
+
+3. swap(string& str): Swaps the contents of the string with another string (`str`).
+
+4. substr(int pos, int n): Creates a new string with a substring of the original string starting at position `pos` and of length `n`.
+
+5. size(): Returns the length of the string.
+
+6. resize(int n): Resizes the string to have a length of `n`.
+
+7. replace(int pos, int len, string& str): Replaces a portion of the string starting at position `pos` and of length `len` with the contents of another string (`str`).
+
+8. append(const string& str): Appends the contents of another string (`str`) to the end of the string.
+
+9. at(int pos): Accesses the character at the specified position `pos`.
+
+10. find(string& str, int pos, int n): Finds the first occurrence of the specified substring (`str`) starting from position `pos` up to `n` characters.
+
+11. find_first_of(string& str, int pos, int n): Finds the first occurrence of any character in the specified substring (`str`) starting from position `pos` up to `n` characters.
+
+12. find_first_not_of(string& str, int pos, int n): Finds the first character that does not match any character in the specified substring (`str`) starting from position `pos` up to `n` characters.
+
+13. find_last_of(string& str, int pos, int n): Finds the last occurrence of any character in the specified substring (`str`) starting from position `pos` up to `n` characters.
+
+14. find_last_not_of(string& str, int pos): Finds the last character that does not match any character in the specified substring (`str`) starting from position `pos`.
+
+15. insert(): Inserts a character before the character at the specified position.
+
+16. max_size(): Returns the maximum possible length of the string.
+
+17. push_back(char ch): Appends the character `ch` to the end of the string.
+
+18. pop_back(): Removes the last character from the string.
+
+19. assign(): Assigns a new value to the string.
+
+20. copy(string& str): Copies the contents of the string into another string (`str`).
+
+21. back(): Returns a reference to the last character of the string.
+
+22. begin(): Returns an iterator pointing to the first character of the string.
+
+23. capacity(): Returns the allocated storage capacity of the string.
+
+24. cbegin(): Returns a constant iterator pointing to the first character of the string.
+
+25. cend(): Returns a constant iterator pointing to the past-the-end character of the string.
+
+26. clear(): Removes all characters from the string.
+
+27. crbegin(): Returns a constant reverse iterator pointing to the last character of the string.
+
+28. data(): Returns a pointer to the underlying character array.
+
+29. empty(): Checks if the string is empty.
+
+30. erase(): Removes characters from the string.
+
+31. front(): Returns a reference to the first character of the string.
+
+32. operator+=(): Appends characters to the string.
+
+33. operator=(): Assigns a new value to the string.
+
+34. operator[](pos): Accesses the character at the specified position using the subscript operator.
+
+35. rfind(): Searches for the last occurrence of the specified string.
+
+36. end(): Returns an iterator referring to the past-the-end character of the string.
+
+37. rend(): Returns a reverse iterator pointing to the theoretical character preceding the first character of the string.
+
+38. shrink_to_fit(): Reduces the capacity of the string to fit its size.
+
+39. c_str(): Returns a pointer to a null-terminated character array representing the string's contents.
+
+40. crend(): Returns a constant reverse iterator pointing to the theoretical character preceding the first character of the string.
+
+41. rbegin(): Returns a reverse iterator pointing to the last character of the string.
+
+42. reserve(int len): Requests a change in capacity.
+
+43. get_allocator(): Returns the allocator associated with the string.

@@ -1,0 +1,47 @@
+Starbucks:
+
+1. Coffee:
+   - Cappuccino
+   - Latte
+   - Espresso
+   - Americano
+   - Mocha
+
+2. Tea:
+   - Green Tea
+   - Black Tea
+   - Herbal Tea
+   - Chai Tea
+   - Earl Grey Tea
+
+3. Milk:
+   - Whole Milk
+   - Skim Milk
+   - Soy Milk
+   - Almond Milk
+   - Oat Milk
+
+4. Juice:
+   - Orange Juice
+   - Apple Juice
+   - Cranberry Juice
+   - Pineapple Juice
+   - Grapefruit Juice
+
+5. Water:
+   - Still Water
+   - Sparkling Water
+   - Flavored Water
+   - Mineral Water
+   - Infused Water
+
+6. Soda:
+   - Cola
+   - Lemon-Lime Soda
+   - Ginger Ale
+   - Root Beer
+   - Orange Soda
+
+7. Exit: This option allows you to exit the program.
+
+every case will have 3 options 1. small 2. medium 3. large

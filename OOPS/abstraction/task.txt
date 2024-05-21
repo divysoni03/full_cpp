@@ -1,0 +1,142 @@
+Using Abstract Class:
+
+1. Cuisine Management System:
+   - Problem: Design a system to manage different cuisines offered by a restaurant.
+   - Test Case: Ensure that each cuisine can calculate the total cost of its dishes.
+   - Logic: Create an abstract class 'Cuisine' with methods for adding dishes and calculating total cost. Subclasses like 'ItalianCuisine', 'ChineseCuisine', etc., implement specific dish addition and cost calculation logic.
+
+2. Recipe Book Application:
+   - Problem: Develop an application to store and manage recipes from various cuisines.
+   - Test Case: Verify that a recipe can be categorized into a specific cuisine.
+   - Logic: Define an abstract class 'Recipe' with methods to display ingredients and cooking instructions. Subclasses like 'ItalianRecipe', 'ChineseRecipe', etc., implement cuisine-specific details.
+
+3. Online Food Ordering System:
+   - Problem: Create a system for customers to order food online from multiple restaurants.
+   - Test Case: Ensure that the total cost of an order includes taxes and delivery charges.
+   - Logic: Define an abstract class 'FoodItem' with methods to calculate the price including taxes. Subclasses like 'Pizza', 'Sushi', etc., implement specific price calculation logic and apply taxes accordingly.
+
+4. Diet Planner Application:
+   - Problem: Develop an application to help users plan their diet by selecting meals from different cuisines.
+   - Test Case: Verify that the total calorie count of a selected meal plan is accurate.
+   - Logic: Create an abstract class 'Meal' with methods to calculate total calories. Subclasses like 'Breakfast', 'Lunch', 'Dinner', etc., implement calorie calculation logic based on the chosen cuisine.
+
+5. Restaurant Rating System:
+   - Problem: Build a system to rate and review restaurants based on the quality of their dishes.
+   - Test Case: Ensure that each restaurant can be rated based on the taste and presentation of its dishes.
+   - Logic: Define an abstract class 'Restaurant' with methods to calculate average ratings. Subclasses like 'ItalianRestaurant', 'ChineseRestaurant', etc., implement rating calculation logic based on customer reviews.
+
+----------------------------------------------------------------------
+
+Tasks using OOPs:
+
+1. Library Management System:
+   Design a system for a library where you can add, remove, and search for books. Each book should have attributes like title, author, and ISBN.
+
+2. Online Shopping Cart:
+   Create an online shopping cart system where users can add, remove, and purchase items. Each item should have properties like name, price, and quantity.
+
+3. Bank Account Management:
+   Implement a bank account system with features for creating accounts, depositing, and withdrawing money. Each account should have attributes like account number, balance, and account holder information.
+
+4. Social Media Network:
+   Design a simplified social media platform with user profiles, posts, and comments. Users can create posts and comment on others' posts.
+
+5. Student Information System:
+   Build a system for managing student information, including their personal details, courses, and grades. Implement features like adding students, assigning courses, and recording grades.
+
+6. Car Rental System:
+   Develop a car rental service where users can rent vehicles, check availability, and return cars. Each vehicle should have attributes like model, price, and availability status.
+
+7. Inventory Management:
+   Create an inventory management system for a store that tracks product stock, prices, and sales. Implement features for adding new products, updating quantities, and generating sales reports.
+
+8. Hospital Appointment Booking:
+   Design a system for patients to book appointments with doctors at a hospital. Doctors should have schedules, and patients can select available slots.
+
+9. Flight Reservation System:
+   Build a flight reservation system where users can search for flights, book tickets, and view their reservations. Flights should have attributes like departure, destination, and price.
+
+10. Restaurant Ordering System:
+    Create a restaurant ordering system where customers can browse the menu, place orders, and pay for their meals. Each item on the menu should have properties like name, price, and description.
+
+Test Cases:
+
+1. Library Management System:
+
+- Test adding a new book to the library.
+- Test removing a book from the library.
+- Test searching for a book by title or author.
+- Test checking out a book to a user.
+- Test checking in a book that was checked out.
+
+2. Online Shopping Cart:
+
+- Test adding items to the cart.
+- Test removing items from the cart.
+- Test calculating the total cost of items in the cart.
+- Test placing an order and updating inventory.
+- Test applying discounts or promotions to items in the cart.
+
+3. Bank Account Management:
+
+- Test creating a new bank account.
+- Test depositing money into an account.
+- Test withdrawing money from an account.
+- Test checking the account balance.
+- Test transferring money between two accounts.
+
+4. Social Media Network:
+
+- Test creating user profiles.
+- Test posting messages and comments.
+- Test viewing a user's profile.
+- Test deleting posts and comments.
+- Test searching for users and posts.
+
+5. Student Information System:
+
+- Test adding a new student record.
+- Test enrolling students in courses.
+- Test recording grades for students.
+- Test generating transcripts for students.
+- Test calculating GPA for students.
+
+6. Car Rental System:
+
+- Test renting a car.
+- Test returning a rented car.
+- Test checking car availability by date.
+- Test calculating rental charges.
+- Test listing available cars.
+
+7. Inventory Management:
+
+- Test adding new products to the inventory.
+- Test updating product quantities.
+- Test generating sales reports.
+- Test searching for products by name or category.
+- Test calculating the total value of the inventory.
+
+8. Hospital Appointment Booking:
+
+- Test scheduling an appointment with a doctor.
+- Test canceling an appointment.
+- Test checking doctor availability by date and time.
+- Test viewing a patient's appointment history.
+- Test notifying patients of upcoming appointments.
+
+9. Flight Reservation System:
+
+- Test searching for available flights by destination and date.
+- Test booking a flight ticket.
+- Test canceling a flight reservation.
+- Test checking flight availability.
+- Test generating a booking confirmation.
+
+10. Restaurant Ordering System:
+
+- Test browsing the menu and selecting items.
+- Test placing an order.
+- Test modifying an order (e.g., adding/removing items).
+- Test calculating the total bill.
+- Test processing payment and generating a receipt.

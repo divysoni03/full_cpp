@@ -1,0 +1,49 @@
+1. Online Store Management System
+   - Classes: Product (Base), Book (Child), Electronics (Child)
+   - Attributes: name, price, category
+   - Methods: calculateDiscount(), displayDetails()
+
+2. Vehicle Rental System
+   - Classes: Vehicle (Base), Car (Child), Bike (Child)
+   - Attributes: brand, model, rentalPrice
+   - Methods: calculateRentalCost(), displayAvailability()
+
+3. Employee Management System
+   - Classes: Employee (Base), Manager (Child), Clerk (Child)
+   - Attributes: name, salary, department
+   - Methods: calculateBonus(), displayDetails()
+
+4. University Course Registration System
+   - Classes: Course (Base), Mathematics (Child), ComputerScience (Child)
+   - Attributes: courseCode, instructor, credits
+   - Methods: checkPrerequisites(), displayDetails()
+
+5. Real Estate Property Management System
+   - Classes: Property (Base), Residential (Child), Commercial (Child)
+   - Attributes: address, area, price
+   - Methods: calculateROI(), displayDetails()
+
+6. Banking System
+   - Classes: Account (Base), SavingsAccount (Child), CheckingAccount (Child)
+   - Attributes: accountNumber, balance, accountType
+   - Methods: deposit(), withdraw(), displayBalance()
+
+7. Hospital Management System
+   - Classes: Patient (Base), Inpatient (Child), Outpatient (Child)
+   - Attributes: name, age, illness
+   - Methods: assignBed(), prescribeMedication()
+
+8. Restaurant Ordering System
+   - Classes: Item (Base), Appetizer (Child), MainCourse (Child)
+   - Attributes: itemName, price, ingredients
+   - Methods: customizeItem(), displayMenu()
+
+9. Inventory Management System
+   - Classes: Product (Base), Electronics (Child), Clothing (Child)
+   - Attributes: itemCode, quantity, price
+   - Methods: updateQuantity(), displayInventory()
+
+10. Social Media Platform
+    - Classes: User (Base), Influencer (Child), RegularUser (Child)
+    - Attributes: username, followers, posts
+    - Methods: createPost(), likePost(), displayProfile()

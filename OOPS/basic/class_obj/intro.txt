@@ -1,0 +1,60 @@
+OOPs - Object Oriented Programming system
+
+Q. What is OOPs?
+A. Object oriented programming organizes a program around its data, i.e. , objects and a set of well defined interfaces to that data. An object-oriented program can be characterized as data controlling access to code.
+
+-> OOP is a paradigm which enables us to solve real world problems, with the help of concepts like inheritance, polymorphism, abstraction and encapsulation.
+
+-> A paradigm where everything is represented by objects.
+
+Q. What is an object?
+A. An object is a physical entity that exists in memory. It can be a piece of data or it can be a set of operations or methods. The object is an instance of a class.
+
+-> Object is a real world Entity.
+
+Q. What is a class?
+A. A class is a template or blueprint that defines the variables and the methods common to all objects of a certain kind. It is a logical entity.
+
+-> class is a collection of similar objects. it can be physical as well as logical.
+
+Q. What is the difference between a class and an object?
+A. A class is a template or blueprint that defines the variables and the methods common to all objects of a certain kind. It is a logical entity. An object is a physical entity that exists in memory. It can be a piece of data or it can be a set of operations or methods. The object is an instance of a class.
+
+
+Syntax of a class:
+
+class class_name
+{
+    access_specifier:
+        data members;
+        member functions();
+};
+
+access_specifier: It defines the access type of the data members and member functions. It can be public, private or protected.
+
+public: Data members and member functions declared as public can be accessed by other classes and functions too.
+
+private: Data members and member functions declared as private can be accessed only by the member functions of the class.
+
+protected: Data members and member functions declared as protected can be accessed by the member functions of the same class and by the member functions of the derived classes.
+
+data members: These are the variables used by the class to store data. These variables can be of any data type.
+
+member functions: These are the functions used to manipulate the data members of the class. These functions can be defined inside or outside the class.
+
+
+Example of class and object:
+
+Class -> Object
+Car -> Maruti 800
+Bike -> Spledor plus/passion pro
+AC -> LG 1.5 ton dual inverter
+TV -> Samsung 32 inch LED
+Mobile -> Redmi note 7 pro
+Laptop -> Dell inspiron 15 3000 series
+Pen -> Saino Softek
+Pencil -> Natraj
+Book -> Physics part 1 by HC Verma
+Chair -> Nilkamal
+
+Task: Name of 50 objects and 50 classes

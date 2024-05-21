@@ -1,0 +1,23 @@
+class -> object
+blanket -> amazonbasics classic blanket
+watch ->titan neo splace
+furniture -> bed,sofa
+cloth ->chax shirt, tshirt , sweatshirt
+bag -> lemon,skybags,american tourist
+car -> ford mustang, toyota supra
+person -> shrey sir,vedant , me , jaynam sir
+book -> harry potter, phycology of money\
+animal -> dog,cat,cow
+movie -> animal,3 idiots, pk
+laptop -> lenovo ideapad,lenovo legion,hp victor
+shoe -> campus casual sneaker,adidas sport shoe
+bhagvan patang bhandar ->kite,plastic kite,firki,tap 
+face wash -> himaliya men face wash, nevia face wash 
+ac -> hitachi 1.5 ton 
+vegetables -> tomato,potato
+mobile -> oneplus 11r,iphone 15,redmi 9
+airplan -> C 17 -GlobeMaster, C130 J - Hercules
+helicopter -> Boeing Ae 64 Apache, BOEING AE 64 Apache
+bikes ->  Bajaj Pulsar NS200, Kawasaki h2r , Royal Enfield Classic 350cc
+
+extra 5 :

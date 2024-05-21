@@ -1,0 +1,31 @@
+1. Get character as input and check whether vowel / consonant Using SWITCH CASE
+Output :-
+Enter any character : c
+Letter is consonant
+
+2. WAP to check whether entered no. in between 1-5 , 6-10 or greater than 10.
+Output:-
+Enter any number : 5
+Between 1 – 5
+
+3. Write switch case for 1 for One, 2 for Two till 10. then print out of range
+Output:-
+Enter no between 1 to 5
+4
+Four
+
+4. Write switch case program to print days of the weeks.
+Output:- 
+Enter the day: 5
+Thursday
+
+5. Write switch case program to print months of the years.
+Output:- 
+Enter the number between 1 to 12: 2
+February
+----------------------------------------------------------------------
+1.C program to print number of days in a month using switch case
+2.C program to find maximum between two numbers using switch case
+3.C program to check even or odd number using switch case
+4.C program to check positive negative or zero using switch case
+5.C program to find all roots of a quadratic equation using switch case

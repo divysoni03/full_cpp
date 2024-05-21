@@ -1,0 +1,11 @@
+Polymorphism in cpp: 
+
+Polymorphism means many forms. It is a technique that allows us to get different behaviors from a single function or method call. In other words, polymorphism allows you to define one interface and have multiple implementations.
+
+-> In simple terms, suppose we have one samosa and we can eat it in different ways like we can eat it with sauce, we can eat it with chutney, we can eat it with tea, we can eat it with coffee, etc. So, here we can see that we are eating the same samosa in different ways. This is called polymorphism.
+
+Topics covered in polymorphism:
+
+1. Overloading -> Function Overloading and Operator Overloading
+2. Overriding -> Function Overriding
+3. Virtual Functions -> Virtual Functions and Pure Virtual Functions

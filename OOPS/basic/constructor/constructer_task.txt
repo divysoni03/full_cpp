@@ -1,0 +1,63 @@
+Tasks: (Constructor)
+
+1. Online Shopping Cart:
+You are developing an online shopping website, and you need to implement a "ShoppingCart" class. The default constructor of this class will initialize the cart with default values such as an empty list of items, total cost set to zero, and a default currency (e.g., USD). Create an object of the "ShoppingCart" class using the default constructor and display the initial details of the cart.
+
+2. Employee Database:
+You are building an application to manage employee data for a company. Implement an "Employee" class with data members like name, employee ID, designation, and salary. The default constructor will initialize the employee with default values like "Unknown" for name and designation, ID set to zero, and salary set to the minimum wage. Create an object using the default constructor to represent a new employee and display their details.
+
+3. Temperature Sensor:
+Imagine you are working on an Internet of Things (IoT) project involving temperature sensors. Create a "TemperatureSensor" class with data members to store the current temperature reading, sensor ID, and location. The default constructor initializes the sensor with a default temperature value, sets the ID as "Unknown," and location as "Unspecified." Create an object of the "TemperatureSensor" class using the default constructor and display its properties.
+
+4. School Attendance Tracker:
+You are developing a system to track student attendance in a school. Implement a "Student" class with data members for student name, roll number, class, and attendance status. The default constructor will set the attendance status to "Absent" by default. Create an object of the "Student" class using the default constructor to represent a new student and display their attendance status.
+
+5. Car Rental System:
+Design a "Car" class to represent cars available for rent in a car rental system. The class should have attributes like car brand, model, year, and rental status. The default constructor initializes the car with default values like "Unknown" for brand and model, year set to the current year, and rental status as "Available." Create an object of the "Car" class using the default constructor and display its details.
+
+Big One:
+
+Problem Statement: Student Database Management
+
+Overview:
+You are tasked with developing a program for managing student details in a tabular format. The program should allow the user to input information about multiple students and display the data in a structured table format.
+
+Features:
+1. Input Student Details: The program should prompt the user to input details for each student, including college name, student name, branch, semester, and CGPA.
+2. Display in Tabular Format: After inputting all student details, the program should display the data in a tabular format, with appropriate headers and separators.
+3. Flexible Input Handling: The program should handle input of strings with spaces using `getline()` and numerical inputs using standard input methods.
+4. Parameterized Constructor: Utilize a parameterized constructor in the `Student` class to initialize student objects with provided data.
+
+Program Flow:
+1. Prompt the user to input details for each student:
+   - College Name
+   - Student Name
+   - Branch
+   - Semester
+   - CGPA
+2. Create a `Student` object for each student using the parameterized constructor, storing the inputted data.
+3. Display the student details in a tabular format as specified:
+   - Print column headers.
+   - Print a separator line.
+   - Iterate through each student object and print their details in the table.
+   - Print a separator line after printing all student details.
+
+Additional Considerations:
+- Ensure error handling for invalid inputs, such as non-numeric values for semester or CGPA.
+- Implement a mechanism to allow the user to input details for multiple students in a sequential manner.
+- Include proper comments and documentation for clarity and maintainability of the code.
+
+Expected Output:
+
+--------------------------------------------------------------------------------------------
+College Name        | Student Name  | Branch                           | Semester | CGPA
+--------------------------------------------------------------------------------------------
+IIITDM Kancheepuram | Naimish       | Computer Science and Engineering | 3        | 9.5
+IIITDM Kancheepuram | Naimish       | Computer Science and Engineering | 3        | 9.5
+IIITDM Kancheepuram | Naimish       | Computer Science and Engineering | 3        | 9.5
+IIITDM Kancheepuram | Naimish       | Computer Science and Engineering | 3        | 9.5
+IIITDM Kancheepuram | Naimish       | Computer Science and Engineering | 3        | 9.5
+--------------------------------------------------------------------------------------------
+
+
+This problem statement outlines the requirements and expected behavior of the student database management program, providing a clear guide for its implementation.
