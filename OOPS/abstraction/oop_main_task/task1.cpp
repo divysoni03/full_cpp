@@ -22,7 +22,7 @@ class FileHandler{
         }
 
         void readFile(){
-            ofstream file(filename.append(".txt")); // writing file name
+            ifstream file(filename.append(".txt")); // writing file name
 
             if(file.is_open()){
                 while(getline(file,str)){
@@ -34,7 +34,7 @@ class FileHandler{
         }
 
         void updateFile(string title,string auther,int id, float price){
-            ofstream file(filename.append(".txt"), ios::out); // where mode is ios : input and output stream and output mode
+            ifstream file(filename.append(".txt")); // where mode is ios : input and output stream and output mode
             string update = "";
             if(file.is_open()){
                 while(getline(file,str)){

@@ -27,7 +27,7 @@ public:
         ifstream file(fileName.append(".txt"));
 
         if(file.is_open()) {
-            file.clear();
+            // file.clear();
             while(getline(file, str)) {
                 cout << str << endl;
             }
