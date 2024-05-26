@@ -16,6 +16,7 @@ class filehandler{
 private:
     string str;
 public:
+    string filename;
     void setFilename(const string& fname) {
         filename = fname + ".txt";
     }
@@ -62,6 +63,8 @@ public:
 };
 
 int main(){
+    int choice;
+    filehandler f;
     do {
         cout << "\n1. Write file\n2. Read file\n3. Print total number of words\n0. Exit" << endl << "Enter your choice: ";
         cin >> choice;
