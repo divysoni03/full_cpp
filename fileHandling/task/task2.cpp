@@ -12,88 +12,116 @@
 #include<fstream>
 using namespace std;
 
-class filehandler{
-private:
-    string str;
-public:
-    string filename;
-    void setFilename(const string& fname) {
-        filename = fname + ".txt";
-    }
-    void writeFile() {
-        ofstream file(filename);
-        if(file.is_open()) {
-            string str;
-            cout << "Enter text: ";
-            cin.ignore(); // Clear the input buffer
-            getline(cin, str);
-            file << str << endl;
-            file.close();
-        } else {
-            cout << "ERROR opening the file!!" << endl;
-        }
-    }
-    void readFile() {
-        ifstream file(filename);
-        if(file.is_open()) {
-            string str;
-            while(getline(file, str)) {
-                cout << str << endl;
+class fileHandler{
+    private:
+        string str;
+    public:
+        string filename;
+    
+        void readfile(){
+            ifstream file(filename.append(".txt"));
+
+            if(file.is_open()){
+                while(getline(file,str)!=){
+                    str.find()
+                }
             }
-            file.close();
-        } else {
-            cout << "ERROR opening the file!!" << endl;
         }
-    }
-    int calculateWords() {
-        ifstream file(filename);
-        if(file.is_open()) {
-            int wordCount = 0;
-            string str;
-            while(file >> str) {
-                wordCount++;
-            }
-            file.close();
-            return wordCount;
-        } else {
-            cout << "ERROR opening the file!!" << endl;
-            return 0;
-        }
-    }
 };
 
 int main(){
-    int choice;
-    filehandler f;
-    do {
-        cout << "\n1. Write file\n2. Read file\n3. Print total number of words\n0. Exit" << endl << "Enter your choice: ";
-        cin >> choice;
 
-        if(choice == 0) {
-            cout << "Exiting the program..." << endl;
-            exit(0);
-        }
-
-        string filename;
-        cout << "Enter your filename: ";
-        cin >> filename;
-        f.setFilename(filename);
-
-        switch (choice) {
-            case 1:
-                f.writeFile();
-                break;
-            case 2:
-                f.readFile();
-                break;
-            case 3:
-                cout << "Total words: " << f.calculateWords() << endl;
-                break;
-            default:
-                cout << "Invalid input!!" << endl;
-                break;
-        }
-    } while(choice != 0);
-    
     return 0;
 }
+
+// #include <iostream>
+// #include <fstream>
+// #include <string>
+
+// using namespace std;
+
+// const int MAX_COLUMNS = 100; // maximum number of columns expected
+
+// // Function to split a string by a delimiter and return an array of strings
+// int split(const string &s, char delimiter, string tokens[], int max_tokens) {
+//     int token_count = 0;
+//     size_t start = 0, end = 0;
+
+//     while ((end = s.find(delimiter, start)) != string::npos) {
+//         if (token_count >= max_tokens) break;
+//         tokens[token_count++] = s.substr(start, end - start);
+//         start = end + 1;
+//     }
+
+//     if (token_count < max_tokens) {
+//         tokens[token_count++] = s.substr(start);
+//     }
+
+//     return token_count;
+// }
+
+// double calculate_average(const string &filename, const string &column_name) {
+//     ifstream file(filename);
+//     if (!file.is_open()) {
+//         cerr << "Error: The file " + filename + " was not found." << endl;
+//         return -1;
+//     }
+
+//     string line;
+//     string header[MAX_COLUMNS];
+//     int column_index = -1;
+//     int num_columns;
+
+//     // Read the header line
+//     if (getline(file, line)) {
+//         num_columns = split(line, ',', header, MAX_COLUMNS);
+//         for (int i = 0; i < num_columns; ++i) {
+//             if (header[i] == column_name) {
+//                 column_index = i;
+//                 break;
+//             }
+//         }
+//         if (column_index == -1) {
+//             cerr << "Error: Column " + column_name + " not found." << endl;
+//             return -1;
+//         }
+//     }
+
+//     double total = 0.0;
+//     int count = 0;
+//     string row[MAX_COLUMNS];
+
+//     // Read the data lines
+//     while (getline(file, line)) {
+//         int row_size = split(line, ',', row, MAX_COLUMNS);
+//         if (row_size > column_index) {
+//             try {
+//                 total += stod(row[column_index]);
+//                 count++;
+//             } catch (const invalid_argument &e) {
+//                 cerr << "Warning: Skipping row with invalid " << column_name << " value" << endl;
+//             }
+//         }
+//     }
+
+//     file.close();
+
+//     if (count == 0) {
+//         cerr << "Error: No valid data found in column: " + column_name << endl;
+//         return -1;
+//     }
+
+//     return total / count;
+// }
+
+// int main() {
+//     string filename = "data.csv";
+//     string column_name = "Age";
+
+//     double average = calculate_average(filename, column_name);
+//     if (average != -1) {
+//         cout << "The average of the column " << column_name << " is " << average << endl;
+//     }
+
+//     return 0;
+// }
