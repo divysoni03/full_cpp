@@ -114,11 +114,55 @@ public:
         }
     }
 
+    void replaceWord() {
+        ifstream file(filename);
+        ofstream tempFile("temp.txt");
+        string oldWord, newWord, line;
+        bool replaced = false;
+
+        cout << "\nEnter the word to be replaced: ";
+        cin >> oldWord;
+        cout << "\nEnter the new word: ";
+        cin >> newWord;
+        cin.ignore();
+
+        if(file.is_open() && tempFile.is_open()) {
+            while(getline(file, line)) {
+                size_t pos;    //size_t => unsigned int
+                while((pos = line.find(oldWord)) != string::npos) {
+                    line.replace(pos, oldWord.length(), newWord);
+                    replaced = true;
+                }
+                tempFile << line << endl;
+            }
+
+            file.close();
+            tempFile.close();
+
+            if(replaced) {
+                // remove((fileName + ".txt").c_str()); // c_ptr() => to convert string into const char pointer
+                // rename("temp.txt", (fileName + ".txt").c_str());
+                remove(filename.c_str());
+                rename("temp.txt", filename.c_str());
+                cout << "Word \"" << oldWord << "\" replaced with \"" << newWord << "\" successfully." << endl;
+            } else {
+                system("pause");
+                cout << "Word \"" << oldWord << "\" not found in the life" << endl;
+            }
+        } else {
+            cout << "Error opening the file..." << endl;
+        }
+    }
+
 };
 
 int main(){
     int choice;
-    fileHandler f("divy");  
+    string filename;
+    cout << "Enter filename to be created : " ;
+    getline(cin,filename);
+    cin.ignore();
+    fileHandler f(filename);  
     
     do{
         cout << "\n1.write file\n2.read file\n3.update file\n4.delete file\n5. Replace Word\n0.Exit\nEnter Your Choice : ";
@@ -143,9 +187,9 @@ int main(){
             case 4:
                 f.deleteFile();
                 break;
-            // case 4:
-            //     f.replaceWord();
-            //     break;
+            case 5:
+                f.replaceWord();
+                break;
             default:
                 cout << "Invalid Input !! Exiting the program..." << endl;
                 break;
