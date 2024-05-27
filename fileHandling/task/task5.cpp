@@ -64,7 +64,7 @@ public:
                     file << word;
                     found = true;
                 }
-            }
+            }// line word (jaynamsir)divy shreysir
 
             if(!found) {
                 cout << "Word \"" << word << "\" is found in the file And updated with \"" << new_word << "\"" << endl;
@@ -95,6 +95,7 @@ public:
                     // cout << "Enter new word to replace : ";
                     // getline(cin,new_word);
                     cin.ignore();
+                    // word.resize(word.size()-word.size());
                     word.replace(word_index,0,"");
                     found = true;
                 }
@@ -120,7 +121,7 @@ int main(){
     fileHandler f("divy");  
     
     do{
-        cout << "\n1.write file\n2.read file\n3.update file\n4.delete file\n0.Exit\nEnter Your Choice : ";
+        cout << "\n1.write file\n2.read file\n3.update file\n4.delete file\n5. Replace Word\n0.Exit\nEnter Your Choice : ";
         cin >> choice ;
         cin.ignore();
 
@@ -142,6 +143,9 @@ int main(){
             case 4:
                 f.deleteFile();
                 break;
+            // case 4:
+            //     f.replaceWord();
+            //     break;
             default:
                 cout << "Invalid Input !! Exiting the program..." << endl;
                 break;

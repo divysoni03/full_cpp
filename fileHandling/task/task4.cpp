@@ -13,7 +13,7 @@ public:
     int count=0;
 
     void writeNames(){
-        ofstream file(filename.append(".txt"));
+        ofstream file(filename.append(".txt"),ios::app);
 
         if(file.is_open()){
             cout << "Enter text :";
