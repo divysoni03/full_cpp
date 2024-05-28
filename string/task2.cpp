@@ -29,7 +29,7 @@ bool compareWord(const string &word, const string badwords[], int size) {
 bool checkword(const string &feedback, const string badwords[], int size) {
     string word;
     for (int i = 0; i <= feedback.length(); ++i) {
-        if (feedback[i] == ' ') {
+        if (feedback[i] == ' ') { //checks current character is space or not , and checks the condition and compare words
             if (word != "") {
                 word = toLower(word);
                 if (compareWord(word, badwords, size)) {
@@ -38,7 +38,7 @@ bool checkword(const string &feedback, const string badwords[], int size) {
                 word.clear();
             }
         } else {
-            word += feedback[i];
+            word += feedback[i]; // if its current character is not space then it saves in the word variable
         }
     }
     return false;
