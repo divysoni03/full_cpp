@@ -15,6 +15,7 @@ public:
         this->filename = filename.append(".txt");
     }
     void writeFile(){
+        system("cls");
         ofstream file(filename);
 
         if(file.is_open()){
@@ -26,10 +27,13 @@ public:
             cout << "ERROR, can't open the file\nExiting the program..." << endl;
         }
         file.close();
+        // system("cls");
     }
     void readFile(){
+        system("cls");
         ifstream file(filename);
 
+        cout << "<-- Contant is down below-->" << endl;
         if(file.is_open()){
             while(getline(file,str)){
                 cout << str ;
@@ -39,82 +43,70 @@ public:
             cout << "ERROR, can't open the file\nExiting the program..." << endl;
         }
         file.close();
+        cout << "\n\n\n";
+        system("pause");
+        system("cls");
     }
-    void updateFile(){
-        fstream file(filename);
-        // ofstream file2(filename);
-        string word, line,new_word;
-        int word_index;
-        bool found = false;
-
-        cout << "Enter the word in file: ";
-        cin >> word;
-        cin.ignore();
+    void updateFile() {
+        system("cls");
+        ofstream file(filename, ios::app);
 
         if(file.is_open()) {
-            while(getline(file, line)){
-                word_index = line.find(word);
-                if(word_index != string::npos){
-                    cout << "Enter new word to replace : ";
-                    getline(cin,new_word);
-                    cin.ignore();
-                    word.resize(word.size()+new_word.size());
-                    // word.replace(word_index,new_word.size(),new_word);
-                    new_word.copy(&word[0],word.size());
-                    file << word;
-                    found = true;
-                }
-            }// line word (jaynamsir)divy shreysir
-
-            if(!found) {
-                cout << "Word \"" << word << "\" is found in the file And updated with \"" << new_word << "\"" << endl;
-            }
-            else{
-                cout << "Word \"" << word << "\" not found in the file." << endl;
-            }
-
-            file.close();
-        } else {
-            cout << "Error opening the file..." << endl;
-        }
+            cout << "Enter the data to store into " << filename << ": ";
+            getline(cin, str);
+            
+            file << endl;
+            file << str << endl;
+            
+        } else cout << "Error opening the file..." << endl;
+        file.close();
+        // system("cls");
     }
-    void deleteFile() {
+    void deleteWord() {
+        system("cls");
         ifstream file(filename);
-        string word, line;
-        int word_index;
-        bool found = false;
+        ofstream tempFile("temp.txt");
+        string Word,line;
+        bool deleted = false;
 
-        cout << "Enter the word in file: ";
-        cin >> word;
+        cout << "\nEnter the word to be deleted: ";
+        cin >> Word;
+        // cout << "\nEnter the new word: ";
+        // cin >> newWord;
         cin.ignore();
 
-        if(file.is_open()) {
-            while(getline(file, line)){
-                word_index = line.find(word);
-                if(word_index != string::npos){
-                    // cout << "Enter new word to replace : ";
-                    // getline(cin,new_word);
-                    cin.ignore();
-                    // word.resize(word.size()-word.size());
-                    word.replace(word_index,0,"");
-                    found = true;
+        if(file.is_open() && tempFile.is_open()) {
+            while(getline(file, line)) {
+                size_t pos;    //size_t => unsigned int
+                while((pos = line.find(Word)) != string::npos) {
+                    line.replace(pos, Word.length(), "");
+                    deleted  = true;
                 }
-            }
-
-            if(!found) {
-                cout << "Word \"" << word << "\" is found in the file And deleted " << endl;
-            }
-            else{
-                cout << "Word \"" << word << "\" not found in the file." << endl;
+                tempFile << line << endl;
             }
 
             file.close();
+            tempFile.close();
+
+            if(deleted) {
+                // remove((fileName + ".txt").c_str()); // c_ptr() => to convert string into const char pointer
+                // rename("temp.txt", (fileName + ".txt").c_str());
+                remove(filename.c_str());
+                rename("temp.txt", filename.c_str());
+                cout << "Word \"" << Word << "\" deleted successfully." << endl;
+            } else {
+                system("pause");
+                cout << "Word \"" << Word << "\" not found in the file" << endl;
+            }
         } else {
+            system("pause");
             cout << "Error opening the file..." << endl;
         }
+        // system("cls");
     }
 
     void replaceWord() {
+        system("cls");
         ifstream file(filename);
         ofstream tempFile("temp.txt");
         string oldWord, newWord, line;
@@ -147,11 +139,12 @@ public:
                 cout << "Word \"" << oldWord << "\" replaced with \"" << newWord << "\" successfully." << endl;
             } else {
                 system("pause");
-                cout << "Word \"" << oldWord << "\" not found in the life" << endl;
+                cout << "Word \"" << oldWord << "\" not found in the file" << endl;
             }
         } else {
             cout << "Error opening the file..." << endl;
         }
+        // system("cls");
     }
 
 };
@@ -159,13 +152,19 @@ public:
 int main(){
     int choice;
     string filename;
+    
+    cout << "<-- Starting the program --> ";
+    system("pause");
+    
+    system("cls");
     cout << "Enter filename to be created : " ;
     getline(cin,filename);
-    cin.ignore();
+    // cin.ignore();
     fileHandler f(filename);  
     
     do{
-        cout << "\n1.write file\n2.read file\n3.update file\n4.delete file\n5. Replace Word\n0.Exit\nEnter Your Choice : ";
+
+        cout << "\n\n1.write file\n2.read file\n3.update file\n4.delete file\n5. Replace Word\n0.Exit\nEnter Your Choice : ";
         cin >> choice ;
         cin.ignore();
 
@@ -185,7 +184,7 @@ int main(){
                 f.updateFile();
                 break;
             case 4:
-                f.deleteFile();
+                f.deleteWord();
                 break;
             case 5:
                 f.replaceWord();
@@ -193,6 +192,7 @@ int main(){
             default:
                 cout << "Invalid Input !! Exiting the program..." << endl;
                 break;
+
         }
     }while(choice != 0);
     
