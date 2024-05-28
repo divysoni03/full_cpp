@@ -47,6 +47,9 @@ public:
                     // word.clear();
                 }
             } else {
+                if(line[i]==' '){
+                    word = "";
+                }
                 word += line[i]; 
             }
         }

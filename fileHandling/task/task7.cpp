@@ -36,17 +36,18 @@ public:
         }
         file.close();
     }
-    void mergeFiles(const char* filename1,const char* filename2){
-        ifstream file1(filename1);
-        ifstream file2(filename2);
+    void mergeFiles(string filename1,string filename2){
+        fstream file1(filename1,ios::in);
+        fstream file2(filename2,ios::in);
 
-        fstream file("mergedFile.txt");
+        ofstream file("newfile.txt");
         if(file.is_open()){ 
             while(getline(file1,str)){
-                file << str;
+                file << str << endl;
             }
+            file << endl;
             while(getline(file2,str)){
-                file << str;
+                file << str << endl;;
             }
         }
         else{
@@ -89,7 +90,7 @@ int main(){
                 getline(cin,file1);
                 // cin.ignore();
                 getline(cin,file2);
-                f.mergeFiles(&file1.append(".txt"),&file2.append(".txt"));
+                f.mergeFiles(file1.append(".txt"),file2.append(".txt"));
                 break;
             default:
                 cout << "Invalid Input ! \nExiting the program...";
