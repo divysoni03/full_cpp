@@ -49,4 +49,14 @@
 
 #include<iostream>
 #include<string>
-#include<>
+#include<fstream>
+using namespace std;
+
+class Trains{};
+class Stations{};
+class Reservation{};
+class Schedule{};
+
+int main(){
+    return 0;
+}
