@@ -105,24 +105,45 @@ public:
 
     void updateFood() {
         system("cls");
-        int skuToBeSearched;
+        int skuToBeSearched,choice;
         cout << "\n<--- Update food --->\nEnter SKU to search: ";
         cin >> skuToBeSearched;
         for (int i = 0; i < count; i++) {
             if (foods[i].getSKU() == skuToBeSearched) {
                 cout << "<--- Food found --->" << endl;
                 foods[i].display();
+                cout << "what you want to update...\n1.Name\n2.Category\n3.SKU\n4.Price\n5.All\n0.Nothing to update\nEnter choice : ";
+                cin >> choice;
                 cin.ignore(); // Clear the buffer before taking string input
-                foods[i].setName(inputName());
-                foods[i].setCategory(inputCategory());
-                foods[i].setSKU(inputSKU());
-                foods[i].setPrice(inputPrice());
+
+                switch(choice){
+                    case 1:
+                        foods[i].setName(inputName());
+                        break;
+                    case 2:
+                        foods[i].setCategory(inputCategory());
+                        break;
+                    case 3:
+                        foods[i].setSKU(inputSKU());
+                        break;
+                    case 4:
+                        foods[i].setPrice(inputPrice());
+                        break;
+                    case 5:
+                        foods[i].setName(inputName());foods[i].setCategory(inputCategory());foods[i].setSKU(inputSKU());foods[i].setPrice(inputPrice());
+                        break;
+                    case 0:
+                        cout << "Exiting the input choice..." << endl;
+                        break;
+                    default:
+                        cout << "Invalid choice !! ALL the program will be run again...\nExiting the program..." << endl;
+                        break;
+                }
                 cout << "Food updated successfully." << endl;
                 system("pause");
                 return;
-            }
+            } else cout << "Error: Food item not found." << endl;
         }
-        cout << "Error: Food item not found." << endl;
     }
 
     void deleteFood() {
