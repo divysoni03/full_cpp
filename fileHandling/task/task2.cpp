@@ -7,121 +7,86 @@
 // Bob,40,6.0,180
 // Charlie,29,5.8,165
 
-#include<iostream>
-#include<string>
-#include<fstream>
+#include <iostream>
+#include <fstream>
+#include <sstream>
+#include <string>
+
 using namespace std;
 
-class fileHandler{
-    private:
-        string str;
-    public:
-        string filename;
-    
-        void readfile(){
-            ifstream file(filename.append(".txt"));
+double calculateAverage(const string &filePath, const string &columnName) {
+    ifstream file(filePath);
+    if (!file.is_open()) {
+        cerr << "Could not open the file!" << endl;
+        return -1;
+    }
 
-            if(file.is_open()){
-                while(getline(file,str)!=){
-                    str.find()
-                }
-            }
+    string line;
+    string headers;
+    getline(file, headers);  // Read the header line
+
+    istringstream headerStream(headers);
+    string header;
+    int columnIndex = -1;
+    int currentIndex = 0;
+
+    // Find the index of the specified column
+    while (getline(headerStream, header, ',')) {
+        if (header == columnName) {
+            columnIndex = currentIndex;
+            break;
         }
-};
+        currentIndex++;
+    }
 
-int main(){
+    if (columnIndex == -1) {
+        cerr << "Column not found!" << endl;
+        return -1;
+    }
+
+    double sum = 0.0;
+    int count = 0;
+
+    // Read each line of the file and extract the data from the specified column
+    while (getline(file, line)) {
+        istringstream lineStream(line);
+        string cell;
+        int currentCellIndex = 0;
+        double value = 0.0;
+
+        while (getline(lineStream, cell, ',')) {
+            if (currentCellIndex == columnIndex) {
+                try {
+                    value = stod(cell);
+                    sum += value;
+                    count++;
+                } catch (const invalid_argument &e) {
+                    cerr << "Invalid data: " << cell << endl;
+                }
+                break;
+            }
+            currentCellIndex++;
+        }
+    }
+
+    file.close();
+
+    if (count > 0) {
+        return sum / count;
+    } else {
+        cerr << "No valid data found in the " << columnName << " column." << endl;
+        return -1;
+    }
+}
+
+int main() {
+    string filePath = "data.csv";
+    string columnName = "Age";  // Change to "Height" or "Weight" for other columns
+
+    double average = calculateAverage(filePath, columnName);
+    if (average != -1) {
+        cout << "The average of the " << columnName << " column is " << average << endl;
+    }
 
     return 0;
 }
-
-// #include <iostream>
-// #include <fstream>
-// #include <string>
-
-// using namespace std;
-
-// const int MAX_COLUMNS = 100; // maximum number of columns expected
-
-// // Function to split a string by a delimiter and return an array of strings
-// int split(const string &s, char delimiter, string tokens[], int max_tokens) {
-//     int token_count = 0;
-//     size_t start = 0, end = 0;
-
-//     while ((end = s.find(delimiter, start)) != string::npos) {
-//         if (token_count >= max_tokens) break;
-//         tokens[token_count++] = s.substr(start, end - start);
-//         start = end + 1;
-//     }
-
-//     if (token_count < max_tokens) {
-//         tokens[token_count++] = s.substr(start);
-//     }
-
-//     return token_count;
-// }
-
-// double calculate_average(const string &filename, const string &column_name) {
-//     ifstream file(filename);
-//     if (!file.is_open()) {
-//         cerr << "Error: The file " + filename + " was not found." << endl;
-//         return -1;
-//     }
-
-//     string line;
-//     string header[MAX_COLUMNS];
-//     int column_index = -1;
-//     int num_columns;
-
-//     // Read the header line
-//     if (getline(file, line)) {
-//         num_columns = split(line, ',', header, MAX_COLUMNS);
-//         for (int i = 0; i < num_columns; ++i) {
-//             if (header[i] == column_name) {
-//                 column_index = i;
-//                 break;
-//             }
-//         }
-//         if (column_index == -1) {
-//             cerr << "Error: Column " + column_name + " not found." << endl;
-//             return -1;
-//         }
-//     }
-
-//     double total = 0.0;
-//     int count = 0;
-//     string row[MAX_COLUMNS];
-
-//     // Read the data lines
-//     while (getline(file, line)) {
-//         int row_size = split(line, ',', row, MAX_COLUMNS);
-//         if (row_size > column_index) {
-//             try {
-//                 total += stod(row[column_index]);
-//                 count++;
-//             } catch (const invalid_argument &e) {
-//                 cerr << "Warning: Skipping row with invalid " << column_name << " value" << endl;
-//             }
-//         }
-//     }
-
-//     file.close();
-
-//     if (count == 0) {
-//         cerr << "Error: No valid data found in column: " + column_name << endl;
-//         return -1;
-//     }
-
-//     return total / count;
-// }
-
-// int main() {
-//     string filename = "data.csv";
-//     string column_name = "Age";
-
-//     double average = calculate_average(filename, column_name);
-//     if (average != -1) {
-//         cout << "The average of the column " << column_name << " is " << average << endl;
-//     }
-
-//     return 0;
-// }
