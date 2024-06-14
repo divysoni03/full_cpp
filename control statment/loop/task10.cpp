@@ -6,18 +6,18 @@
 using namespace std;
 
 int factorial(int num){
-    int sum=1;
-    if(num == 0 || num==1){
-        return 1;
-    }
-    else{
-        while(num>0){
-            sum*=num;
-            num--;
-        }    
-    }
-    
-    return sum;
+    // int sum=1;
+    // if(num == 0 || num==1){
+    //     return 1;
+    // }
+    // else{
+    //     while(num>0){
+    //         sum*=num;
+    //         num--;
+    //     }    
+    // }
+    if(num == 0 || num == 1) return 1;
+    else return num * factorial(num-1);
 }
 
 int main(){

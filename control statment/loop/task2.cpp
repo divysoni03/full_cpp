@@ -10,10 +10,7 @@ int main(){
     int num,result=1;
     cout << "\nEnter the number : ";
     cin >> num;
-    while(num>0){
-        result*=num;
-        num--;
-    }
+    while(num>0){result*=num;num--;}
     cout << "\nThe Factorial is " << result;
     return 0;
 }
