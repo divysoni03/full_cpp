@@ -7,7 +7,7 @@
 // To use vectors in C++, you need to include the vector header file:
 
 #include<iostream>
-#include <vector>
+#include <vector> // included header file for vectors
 using namespace std;
 
 // declaration of vector in different ways 
@@ -17,6 +17,7 @@ vector<int> myVector;
 
 // 2.fill constructor
 vector<int> myVector(10); // Creates a vector with 10 default-initialized integers
+vector<int> myVector[10]; // we can also use this
 vector<int> myVector(10, 5); // Creates a vector with 10 elements, each initialized to 5
 
 // 3.initializing list using elements
@@ -59,4 +60,15 @@ for (auto it = myVector.begin(); it != myVector.end(); ++it) {
 
 // where .begin() returns beginning of vector and .end() end of vector
 
+// inserting the element into vector in between or any other location
+myVector.insert(/*position*/,/*element*/);
+//it will insert element into vector which location or index we gave
+
+//removing element from vector from any location or index
+myVector.erase(/*position*/);
+// it will remove element from any index we gave or pass
+
+// clear all elements from the vector and empty the whole vector
+myVector.clear();
+// it will remove all the elements from the vector
 
