@@ -80,6 +80,16 @@ public:
         }
         head = prev;
     }
+    void lengthList() {
+        Node* current = head;
+        int count = 1;
+        while(current != nullptr) {
+            count++;
+            current = current->next;
+        }
+        cout << "Length of linked list :" << count << endl;
+        system("pause");
+    }
 
 
     //display method
@@ -99,7 +109,7 @@ int main() {
     do{
         system("cls");
         list.display();
-        cout << "\n\n1.insert at beginning,\n2.insert at end,\n3.delete node at beginning,\n4.delete node at end,\n5.reverse the linked list,\n0.Exit,\nEnter Your choice :";
+        cout << "\n\n1.insert at beginning,\n2.insert at end,\n3.delete node at beginning,\n4.delete node at end,\n5.reverse the linked list,\n6.length of linked list\n0.Exit,\nEnter Your choice :";
         cin >> choice;
 
         switch(choice) {
@@ -117,6 +127,9 @@ int main() {
                 break;
             case 5:
                 list.reverseList();
+                break;
+            case 6:
+                list.lengthList();
                 break;
             case 0:
                 cout << "Exiting the program..."<< endl;
