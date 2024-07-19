@@ -13,26 +13,19 @@ int main() {
         cout << "Enter " << i << "'th value: ";
         cin >> nums[i];
     }
+
     cout << "All Elements : ";
     for(int ele : nums) {
         cout << ele << " ";
     }
+    cout << endl;
 
-    for(int i=0;i<nums.size()-1;i++) {
-        for(int j=i+1;j<nums.size();j++) {
-            if(nums[i] == nums[j]) {
-                nums[i]=nums[j]=-1;
-            }
-        }
-    }
-
+    int unique = 0;
     for(int ele : nums) {
-        if(ele > 0) {
-            cout << "Unique Element :"
-         << ele << endl;
-        }
-         return 0;
+        unique ^= ele; //removes the not unique elements from the vector
     }
-    cout << "No unique elements." << endl;
+
+    cout << "Unique Element : " << unique << endl;
+
     return 0;
 }
