@@ -1,28 +1,34 @@
 #include<iostream>
+#include <string>
 using namespace std;
 
-bool isPalindrome(string s) {
-    for(char ch: s) {
-        ch = (char) tolower(ch);
+class Solution {
+public:
+    int lengthOfLastWord(string s) {
+        string word = "";
+        string ans = "";
+        int i=0;
+        do{
+            // cout << s[i] << " ";
+            if(s[i] == ' ') {
+                    ans = "";
+                    ans.append(word);
+                    // cout << word << " ";
+                    word = "";
+                
+            }
+            else {
+                word += s[i];
+            }
+            i++;
+        }while(s[i] != '\0');
+        cout << endl << ans << endl <<i <<endl;
+        return ans.size();
     }
-    string str[s.size()];
-    int count =0;
-    for(int i=0;i<s.size();++i) {
-        if(s[i]>=97&&s[i]<=122) {
-            str[count] = s[i];
-            count++;
-        }
-    }
-    int i=0,j=count-1;
-    while(i<=j) {
-        if(str[i] != str[j]) {
-            return false;
-        }
-        i++;j--;
-    }
-    return true;
-}
+};
 
 int main() {
-    cout << isPalindrome("A man, a plan, a canal: Panama") << endl;
+    Solution s;
+    cout << "length : " <<s.lengthOfLastWord("luffy is still joyboy");
+    return 0;   
 }
